@@ -1,0 +1,536 @@
+{
+  "timestamp": "2026-06-20T12:05:02.211Z",
+  "embedding_model": "gemini-embedding-001",
+  "top_k": 5,
+  "total_queries": 30,
+  "hits": 30,
+  "misses": 0,
+  "recall_at_5": 100,
+  "pass": true,
+  "details": [
+    {
+      "query": "What is binary search and when should I use it?",
+      "expected": [
+        "dsa_binarysearch_001",
+        "dsa_binarysearch_002"
+      ],
+      "retrieved": [
+        "dsa_binarysearch_001",
+        "dsa_binarysearch_002",
+        "dsa_bst_001",
+        "dsa_arrays_003",
+        "dsa_heap_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_binarysearch_001",
+        "dsa_binarysearch_002"
+      ]
+    },
+    {
+      "query": "Explain the difference between arrays and linked lists",
+      "expected": [
+        "dsa_linkedlist_003",
+        "dsa_arrays_001"
+      ],
+      "retrieved": [
+        "dsa_linkedlist_003",
+        "dsa_linkedlist_001",
+        "dsa_arrays_001",
+        "dsa_stack_001",
+        "dsa_arrays_003"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_linkedlist_003",
+        "dsa_arrays_001"
+      ]
+    },
+    {
+      "query": "How does a hash table work?",
+      "expected": [
+        "dsa_hashing_001",
+        "dsa_hashing_002"
+      ],
+      "retrieved": [
+        "dsa_hashing_001",
+        "dsa_hashing_002",
+        "dbms_indexing_001",
+        "sd_primer_db_sharding_001",
+        "sd_database_002"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_hashing_001",
+        "dsa_hashing_002"
+      ]
+    },
+    {
+      "query": "What are the different sorting algorithms and their time complexities?",
+      "expected": [
+        "dsa_sorting_001",
+        "dsa_sorting_002"
+      ],
+      "retrieved": [
+        "dsa_sorting_001",
+        "dsa_sorting_002",
+        "dsa_complexity_001",
+        "dsa_arrays_003",
+        "dsa_heap_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_sorting_001",
+        "dsa_sorting_002"
+      ]
+    },
+    {
+      "query": "Explain BFS and DFS graph traversals",
+      "expected": [
+        "dsa_graphs_002"
+      ],
+      "retrieved": [
+        "dsa_graphs_002",
+        "dsa_graphs_004",
+        "dsa_trees_002",
+        "dsa_graphs_003",
+        "dsa_graphs_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_graphs_002"
+      ]
+    },
+    {
+      "query": "What is dynamic programming and how do I approach DP problems?",
+      "expected": [
+        "dsa_dp_001",
+        "dsa_dp_003"
+      ],
+      "retrieved": [
+        "dsa_dp_001",
+        "dsa_dp_003",
+        "dsa_dp_002",
+        "dsa_recursion_001",
+        "dsa_greedy_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_dp_001",
+        "dsa_dp_003"
+      ]
+    },
+    {
+      "query": "How does a stack work and what is a monotonic stack?",
+      "expected": [
+        "dsa_stack_001",
+        "dsa_stack_002"
+      ],
+      "retrieved": [
+        "dsa_stack_001",
+        "dsa_stack_002",
+        "dsa_heap_001",
+        "dsa_queue_001",
+        "os_process_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_stack_001",
+        "dsa_stack_002"
+      ]
+    },
+    {
+      "query": "What is the sliding window technique?",
+      "expected": [
+        "dsa_slidingwindow_001"
+      ],
+      "retrieved": [
+        "dsa_slidingwindow_001",
+        "dsa_arrays_002",
+        "dsa_twopointer_001",
+        "sd_ratelimiting_001",
+        "dsa_stack_002"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_slidingwindow_001"
+      ]
+    },
+    {
+      "query": "Explain Dijkstra's shortest path algorithm",
+      "expected": [
+        "dsa_graphs_003"
+      ],
+      "retrieved": [
+        "dsa_graphs_003",
+        "dsa_graphs_002",
+        "dsa_greedy_001",
+        "dsa_dp_001",
+        "dsa_graphs_004"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_graphs_003"
+      ]
+    },
+    {
+      "query": "What is topological sort and how to detect cycles in a graph?",
+      "expected": [
+        "dsa_graphs_004"
+      ],
+      "retrieved": [
+        "dsa_graphs_004",
+        "dsa_graphs_002",
+        "dsa_graphs_001",
+        "dsa_unionfind_001",
+        "dsa_stack_002"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_graphs_004"
+      ]
+    },
+    {
+      "query": "What is a trie and where is it used?",
+      "expected": [
+        "dsa_trie_001"
+      ],
+      "retrieved": [
+        "dsa_trie_001",
+        "dsa_unionfind_001",
+        "dbms_indexing_001",
+        "dsa_string_001",
+        "dsa_segment_tree_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_trie_001"
+      ]
+    },
+    {
+      "query": "Explain Union-Find data structure",
+      "expected": [
+        "dsa_unionfind_001"
+      ],
+      "retrieved": [
+        "dsa_unionfind_001",
+        "dsa_heap_001",
+        "dsa_segment_tree_001",
+        "dbms_indexing_001",
+        "dsa_stack_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_unionfind_001"
+      ]
+    },
+    {
+      "query": "What is the two pointer technique?",
+      "expected": [
+        "dsa_twopointer_001"
+      ],
+      "retrieved": [
+        "dsa_twopointer_001",
+        "dsa_arrays_002",
+        "dsa_linkedlist_002",
+        "dsa_slidingwindow_001",
+        "dsa_linkedlist_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_twopointer_001"
+      ]
+    },
+    {
+      "query": "Explain recursion and backtracking with examples",
+      "expected": [
+        "dsa_recursion_001"
+      ],
+      "retrieved": [
+        "dsa_recursion_001",
+        "dsa_dp_001",
+        "dsa_graphs_002",
+        "dsa_stack_001",
+        "dsa_dp_002"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_recursion_001"
+      ]
+    },
+    {
+      "query": "What is a binary search tree and its operations?",
+      "expected": [
+        "dsa_bst_001"
+      ],
+      "retrieved": [
+        "dsa_bst_001",
+        "dsa_trees_001",
+        "dsa_trees_002",
+        "dsa_heap_001",
+        "dsa_segment_tree_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dsa_bst_001"
+      ]
+    },
+    {
+      "query": "How does horizontal vs vertical scaling work?",
+      "expected": [
+        "sd_scalability_001"
+      ],
+      "retrieved": [
+        "sd_scalability_001",
+        "sd_primer_perf_vs_scale_001",
+        "sd_primer_reverseproxy_001",
+        "sd_primer_availability_001",
+        "sd_primer_lb_layers_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "sd_scalability_001"
+      ]
+    },
+    {
+      "query": "Explain load balancing and its algorithms",
+      "expected": [
+        "sd_loadbalancing_001"
+      ],
+      "retrieved": [
+        "sd_loadbalancing_001",
+        "sd_primer_lb_001",
+        "os_process_002",
+        "sd_primer_lb_layers_001",
+        "sd_ratelimiting_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "sd_loadbalancing_001"
+      ]
+    },
+    {
+      "query": "What are different caching strategies?",
+      "expected": [
+        "sd_caching_001"
+      ],
+      "retrieved": [
+        "sd_caching_001",
+        "sd_primer_cache_patterns_001",
+        "sd_primer_cdn_001",
+        "sd_cdn_001",
+        "sd_primer_consistency_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "sd_caching_001"
+      ]
+    },
+    {
+      "query": "SQL vs NoSQL databases - when to use which?",
+      "expected": [
+        "sd_database_001",
+        "dbms_nosql_001"
+      ],
+      "retrieved": [
+        "sd_database_001",
+        "dbms_nosql_001",
+        "sd_database_002",
+        "sd_primer_db_sharding_001",
+        "dbms_normalization_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "sd_database_001",
+        "dbms_nosql_001"
+      ]
+    },
+    {
+      "query": "What is the CAP theorem?",
+      "expected": [
+        "sd_cap_001"
+      ],
+      "retrieved": [
+        "sd_primer_cap_001",
+        "sd_cap_001",
+        "sd_consistency_001",
+        "sd_primer_consistency_001",
+        "dbms_acid_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "sd_cap_001"
+      ]
+    },
+    {
+      "query": "Explain microservices architecture and its trade-offs",
+      "expected": [
+        "sd_microservices_001"
+      ],
+      "retrieved": [
+        "sd_microservices_001",
+        "sd_primer_microservices_001",
+        "sd_primer_rest_vs_rpc_001",
+        "sd_scalability_001",
+        "sd_messaging_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "sd_microservices_001"
+      ]
+    },
+    {
+      "query": "How to design a URL shortener?",
+      "expected": [
+        "sd_urlshortener_001"
+      ],
+      "retrieved": [
+        "sd_urlshortener_001",
+        "sd_primer_design_pastebin_001",
+        "sd_primer_db_sharding_001",
+        "sd_api_design_001",
+        "sd_database_002"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "sd_urlshortener_001"
+      ]
+    },
+    {
+      "query": "What is database normalization?",
+      "expected": [
+        "dbms_normalization_001"
+      ],
+      "retrieved": [
+        "dbms_normalization_001",
+        "sd_database_001",
+        "dbms_acid_001",
+        "sd_primer_db_federation_001",
+        "dbms_indexing_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dbms_normalization_001"
+      ]
+    },
+    {
+      "query": "Explain ACID properties in databases",
+      "expected": [
+        "dbms_acid_001"
+      ],
+      "retrieved": [
+        "dbms_acid_001",
+        "dbms_normalization_001",
+        "dbms_transactions_001",
+        "sd_cap_001",
+        "sd_database_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dbms_acid_001"
+      ]
+    },
+    {
+      "query": "How do database indexes work?",
+      "expected": [
+        "dbms_indexing_001"
+      ],
+      "retrieved": [
+        "dbms_indexing_001",
+        "sd_primer_db_sharding_001",
+        "dbms_normalization_001",
+        "sd_database_002",
+        "sd_database_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "dbms_indexing_001"
+      ]
+    },
+    {
+      "query": "Explain the OSI model layers",
+      "expected": [
+        "cn_osi_001"
+      ],
+      "retrieved": [
+        "cn_osi_001",
+        "sd_primer_lb_layers_001",
+        "cn_subnetting_001",
+        "cn_dns_001",
+        "cn_tcp_handshake_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "cn_osi_001"
+      ]
+    },
+    {
+      "query": "What is the difference between TCP and UDP?",
+      "expected": [
+        "cn_tcpudp_001"
+      ],
+      "retrieved": [
+        "cn_tcpudp_001",
+        "sd_primer_comm_tcp_001",
+        "sd_primer_comm_udp_001",
+        "cn_tcp_handshake_001",
+        "cn_http_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "cn_tcpudp_001"
+      ]
+    },
+    {
+      "query": "How does DNS work?",
+      "expected": [
+        "cn_dns_001"
+      ],
+      "retrieved": [
+        "sd_primer_dns_001",
+        "cn_dns_001",
+        "sd_primer_cdn_001",
+        "cn_tcpudp_001",
+        "sd_primer_consistency_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "cn_dns_001"
+      ]
+    },
+    {
+      "query": "How should I answer tell me about yourself?",
+      "expected": [
+        "hr_tell_about_yourself_001"
+      ],
+      "retrieved": [
+        "hr_tell_about_yourself_001",
+        "hr_strengths_001",
+        "hr_weaknesses_001",
+        "hr_failure_001",
+        "hr_where_5years_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "hr_tell_about_yourself_001"
+      ]
+    },
+    {
+      "query": "How to answer what are your weaknesses in an interview?",
+      "expected": [
+        "hr_weaknesses_001"
+      ],
+      "retrieved": [
+        "hr_weaknesses_001",
+        "hr_failure_001",
+        "hr_strengths_001",
+        "hr_why_company_001",
+        "hr_why_leave_001"
+      ],
+      "hit": true,
+      "matched_ids": [
+        "hr_weaknesses_001"
+      ]
+    }
+  ]
+}

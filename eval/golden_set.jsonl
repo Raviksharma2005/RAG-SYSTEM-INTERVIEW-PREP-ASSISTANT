@@ -1,0 +1,30 @@
+{"query":"What is binary search and when should I use it?","expected_chunk_ids":["dsa_binarysearch_001","dsa_binarysearch_002"]}
+{"query":"Explain the difference between arrays and linked lists","expected_chunk_ids":["dsa_linkedlist_003","dsa_arrays_001"]}
+{"query":"How does a hash table work?","expected_chunk_ids":["dsa_hashing_001","dsa_hashing_002"]}
+{"query":"What are the different sorting algorithms and their time complexities?","expected_chunk_ids":["dsa_sorting_001","dsa_sorting_002"]}
+{"query":"Explain BFS and DFS graph traversals","expected_chunk_ids":["dsa_graphs_002"]}
+{"query":"What is dynamic programming and how do I approach DP problems?","expected_chunk_ids":["dsa_dp_001","dsa_dp_003"]}
+{"query":"How does a stack work and what is a monotonic stack?","expected_chunk_ids":["dsa_stack_001","dsa_stack_002"]}
+{"query":"What is the sliding window technique?","expected_chunk_ids":["dsa_slidingwindow_001"]}
+{"query":"Explain Dijkstra's shortest path algorithm","expected_chunk_ids":["dsa_graphs_003"]}
+{"query":"What is topological sort and how to detect cycles in a graph?","expected_chunk_ids":["dsa_graphs_004"]}
+{"query":"What is a trie and where is it used?","expected_chunk_ids":["dsa_trie_001"]}
+{"query":"Explain Union-Find data structure","expected_chunk_ids":["dsa_unionfind_001"]}
+{"query":"What is the two pointer technique?","expected_chunk_ids":["dsa_twopointer_001"]}
+{"query":"Explain recursion and backtracking with examples","expected_chunk_ids":["dsa_recursion_001"]}
+{"query":"What is a binary search tree and its operations?","expected_chunk_ids":["dsa_bst_001"]}
+{"query":"How does horizontal vs vertical scaling work?","expected_chunk_ids":["sd_scalability_001"]}
+{"query":"Explain load balancing and its algorithms","expected_chunk_ids":["sd_loadbalancing_001"]}
+{"query":"What are different caching strategies?","expected_chunk_ids":["sd_caching_001"]}
+{"query":"SQL vs NoSQL databases - when to use which?","expected_chunk_ids":["sd_database_001","dbms_nosql_001"]}
+{"query":"What is the CAP theorem?","expected_chunk_ids":["sd_cap_001"]}
+{"query":"Explain microservices architecture and its trade-offs","expected_chunk_ids":["sd_microservices_001"]}
+{"query":"How to design a URL shortener?","expected_chunk_ids":["sd_urlshortener_001"]}
+{"query":"What is database normalization?","expected_chunk_ids":["dbms_normalization_001"]}
+{"query":"Explain ACID properties in databases","expected_chunk_ids":["dbms_acid_001"]}
+{"query":"How do database indexes work?","expected_chunk_ids":["dbms_indexing_001"]}
+{"query":"Explain the OSI model layers","expected_chunk_ids":["cn_osi_001"]}
+{"query":"What is the difference between TCP and UDP?","expected_chunk_ids":["cn_tcpudp_001"]}
+{"query":"How does DNS work?","expected_chunk_ids":["cn_dns_001"]}
+{"query":"How should I answer tell me about yourself?","expected_chunk_ids":["hr_tell_about_yourself_001"]}
+{"query":"How to answer what are your weaknesses in an interview?","expected_chunk_ids":["hr_weaknesses_001"]}
