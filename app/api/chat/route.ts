@@ -56,7 +56,9 @@ export async function POST(req: NextRequest) {
       const stream = new ReadableStream({
         async start(controller) {
           try {
-            const parsed = JSON.parse(cachedResponse);
+            const parsed = typeof cachedResponse === 'string'
+              ? JSON.parse(cachedResponse)
+              : (cachedResponse as any);
             const { text, metadata } = parsed;
 
             // Stream cached response in blocks to mimic live streaming (speed: 60 chars per 10ms)
@@ -80,9 +82,13 @@ export async function POST(req: NextRequest) {
               )
             );
           } catch (_) {
-            // Fallback for plain text caches
+            // Fallback for plain text or nested caches
+            const fallbackText = typeof cachedResponse === 'string'
+              ? cachedResponse
+              : (cachedResponse as any)?.text || JSON.stringify(cachedResponse);
+            
             controller.enqueue(
-              encoder.encode(`data: ${JSON.stringify({ type: 'chunk', text: cachedResponse })}\n\n`)
+              encoder.encode(`data: ${JSON.stringify({ type: 'chunk', text: fallbackText })}\n\n`)
             );
             controller.enqueue(
               encoder.encode(
