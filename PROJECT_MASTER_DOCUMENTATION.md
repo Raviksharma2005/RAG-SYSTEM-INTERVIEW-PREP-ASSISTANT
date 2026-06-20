@@ -99,12 +99,12 @@ interview-rag/
 ### High-Level Architecture Diagram
 ```mermaid
 graph TD
-    Client["Client (Browser Page)"] -- HTTPS / SSE Stream --> App["Next.js Serverless (Vercel)"]
-    App -- Redis REST API --> UpstashRedis["Upstash Redis Cache"]
-    App -- Vector REST API --> UpstashVector["Upstash Vector DB"]
-    App -- HTTPS POST --> GeminiEmbed["Gemini Embedding API"]
-    App -- HTTPS POST --> GroqAPI["Groq LLM (Primary)"]
-    App -- HTTPS POST --> GeminiLLM["Gemini LLM (Fallback)"]
+    Client["Client (Browser Page)"] --> App["Next.js Serverless (Vercel)"]
+    App --> UpstashRedis["Upstash Redis Cache"]
+    App --> UpstashVector["Upstash Vector DB"]
+    App --> GeminiEmbed["Gemini Embedding API"]
+    App --> GroqAPI["Groq LLM (Primary)"]
+    App --> GeminiLLM["Gemini LLM (Fallback)"]
 ```
 
 ### Component Diagram
@@ -127,8 +127,8 @@ graph LR
         Groundedness["groundedness.ts"]
     end
     subgraph External ["Cloud Service Layer"]
-        RedisDB[("Upstash Redis")]
-        VectorIndex[("Upstash Vector")]
+        RedisDB["Upstash Redis"]
+        VectorIndex["Upstash Vector"]
         GeminiCloud["Google AI Studio"]
         GroqCloud["Groq Cloud"]
     end
@@ -169,8 +169,8 @@ graph TD
         LLMClient["Multi-Provider LLM Client"]
     end
     subgraph Storage ["External Database & API Layer"]
-        RedisStorage[("Upstash Redis (Key-Value)")]
-        VectorStorage[("Upstash Vector (Cosine 768)")]
+        RedisStorage["Upstash Redis (Key-Value)"]
+        VectorStorage["Upstash Vector (Cosine 768)"]
         GeminiAPI["Gemini Embedding & Text API"]
         GroqAPI["Groq Llama 3.3 API"]
     end
@@ -195,24 +195,24 @@ sequenceDiagram
     participant LLM as Multi-LLM (Groq/Gemini)
     participant Ground as Groundedness Checker
 
-    Candidate->>API: POST /api/chat (Query, Domain, Difficulty)
+    Candidate->>API: POST /api/chat
     API->>Cache: Check Cached Response
     alt Cache Hit
         Cache-->>API: Return Cached Result
         API-->>Candidate: Stream Cached Result (Simulated)
     else Cache Miss
-        API->>Embed: generate Embedding
+        API->>Embed: Generate Embedding
         Embed-->>API: 768-dim Vector
-        API->>Vector: query Vector DB (filter: Domain)
+        API->>Vector: Query Vector DB (with filter)
         Vector-->>API: Top 5 Context Chunks
-        API->>LLM: generateStream (Context + History)
-        loop Stream
+        API->>LLM: Stream response (Context + History)
+        loop Token Streaming
             LLM-->>API: Text Tokens
             API-->>Candidate: SSE Text Chunk
         end
-        API->>Ground: verify Groundedness (Response vs Chunks)
-        Ground-->>API: Groundedness Rating (Score %)
-        API->>Cache: Save Response & Metadata (Sources, Score)
+        API->>Ground: Verify Groundedness
+        Ground-->>API: Groundedness Rating
+        API->>Cache: Save Response & Metadata
         API-->>Candidate: SSE Metadata Chunk
     end
 ```
@@ -408,8 +408,8 @@ graph TD
         NextJS["Next.js Serverless Route Functions"]
     end
     subgraph Remote Databases
-        RedisCache[("Upstash Redis Cache")]
-        VectorDB[("Upstash Vector Index")]
+        RedisCache["Upstash Redis Cache"]
+        VectorDB["Upstash Vector Index"]
     end
     subgraph AI API Provider Clouds
         GroqLLM["Groq Llama 3.3 API"]
