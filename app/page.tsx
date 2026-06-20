@@ -190,29 +190,41 @@ export default function Home() {
             if (data.type === 'chunk') {
               setMessages(prev => {
                 const next = [...prev];
-                const lastMsg = next[next.length - 1];
+                const lastIdx = next.length - 1;
+                const lastMsg = next[lastIdx];
                 if (lastMsg && lastMsg.role === 'assistant') {
-                  lastMsg.content += data.text;
+                  next[lastIdx] = {
+                    ...lastMsg,
+                    content: lastMsg.content + data.text,
+                  };
                 }
                 return next;
               });
             } else if (data.type === 'metadata') {
               setMessages(prev => {
                 const next = [...prev];
-                const lastMsg = next[next.length - 1];
+                const lastIdx = next.length - 1;
+                const lastMsg = next[lastIdx];
                 if (lastMsg && lastMsg.role === 'assistant') {
-                  lastMsg.groundedness = data.groundedness;
-                  lastMsg.provider = data.provider;
-                  lastMsg.sources = data.sources;
+                  next[lastIdx] = {
+                    ...lastMsg,
+                    groundedness: data.groundedness,
+                    provider: data.provider,
+                    sources: data.sources,
+                  };
                 }
                 return next;
               });
             } else if (data.type === 'error') {
               setMessages(prev => {
                 const next = [...prev];
-                const lastMsg = next[next.length - 1];
+                const lastIdx = next.length - 1;
+                const lastMsg = next[lastIdx];
                 if (lastMsg && lastMsg.role === 'assistant') {
-                  lastMsg.content = `❌ Error: ${data.message}`;
+                  next[lastIdx] = {
+                    ...lastMsg,
+                    content: `❌ Error: ${data.message}`,
+                  };
                 }
                 return next;
               });
@@ -226,9 +238,13 @@ export default function Home() {
       console.error('Chat submit error:', err);
       setMessages(prev => {
         const next = [...prev];
-        const lastMsg = next[next.length - 1];
+        const lastIdx = next.length - 1;
+        const lastMsg = next[lastIdx];
         if (lastMsg && lastMsg.role === 'assistant') {
-          lastMsg.content = `❌ Error: ${err.message || 'Failed to fetch response.'}`;
+          next[lastIdx] = {
+            ...lastMsg,
+            content: `❌ Error: ${err.message || 'Failed to fetch response.'}`,
+          };
         }
         return next;
       });
